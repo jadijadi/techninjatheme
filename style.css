@@ -1,0 +1,355 @@
+/*
+Theme Name: WP MashThirteen
+Theme URI: http://crayonux.com/mashthirteen
+Author: Basanta Moharana
+Author URI: http://crayonux.com/
+
+Description: WP MashThirteen is a Mashable (http://mashable.com/) inspired TwentyThirteen child theme powered by TwitterBootstrap 3.0. The theme doesn't looks exactly as mashable design, some how you will feel like Mashable. The child theme will help any blogger to convert their blogs to a clean and beautiful design like mashabe. The child theme only works with TwentyThirteen  parent theme. Due to bootstrap power, admin can add a lot of creative works  to its content. This is fully responsive theme, works perfectly with any mobile devices or tablet.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, blue, light, green,  three-columns, two-columns, right-sidebar, flexible-width, custom-menu, featured-images
+Text Domain: mashthirteen
+Template: twentythirteen
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+@import url(../twentythirteen/style.css);
+@import url(css/bootstrap.css);
+@import url(css/bootstrap-theme.css);
+
+@import url(css/bootstrap-rtl.min.css);
+
+
+@import url(css/jadi.css);
+/* custom css starts here */
+
+body {
+	background: #f6f5f2;
+	
+}
+a {
+	color: #2693BA;
+}
+
+.site-title  {
+	font-size: 25px;
+}
+.main-navigation  {
+	clear: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Droid Arabic Naskh", 'Roboto Slab', serif !important;
+}
+.dropdown {
+	position: relative;
+	width: 100px;
+	display: inline-block;
+}
+.menu-top-menu-container {
+	max-width: 700px;
+	display: inline-block;
+	width: 60%;
+}
+
+.menu-top-menu-container ul {
+	width: 700px;
+}
+.menu-top-menu-container ul ul {
+	width: 200px;
+}
+
+.row {
+	margin: 0px;
+	padding: 50px 20px;
+}
+
+.entrypart article {
+	background: #fff;
+	padding: 0px;
+	margin: 30px 0px;
+}
+.post-meta {
+	padding: 5px 15px;
+}
+.entrypart article .entry-title {
+	padding: 5px 15px;
+	font-size: 200%;
+}
+.entrypart article p {
+	padding: 5px 15px;
+}
+.entrypart article footer.entry-meta {
+	padding: 5px 15px 20px 15px;
+	margin: 0px;
+}
+.randomposts {
+	background: #fff;
+	position: relative;
+	padding-top: 60px;
+}
+.randomposts article {
+	background: #fff;
+	padding: 0px 0px 20px 0px;
+	margin: 30px 0px;
+	-webkit-box-shadow: 2px 2px 4px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    2px 2px 4px rgba(50, 50, 50, 0.75);
+	box-shadow:         2px 2px 4px rgba(50, 50, 50, 0.75);
+}
+.post-meta {
+	padding: 5px 15px;
+}
+.randomposts article .entry-title {
+	padding: 5px 15px;
+	font-size: 150%;
+}
+.randomposts article p {
+	padding: 5px 15px;
+}
+.randomposts h2 {
+	padding: 5px 15px 30px 20px;
+	background: url(images/rebon.png) bottom right no-repeat;
+	position: absolute;
+	right: -17px;
+    top: 10px;
+    width: 105%;
+	font-size: 22px;
+	color: #fff;
+}
+.navbar {
+	background: #50B7DC;
+	border-bottom: 1px solid #2693BA;
+	line-height: .7 !important;
+}
+.navbar-brand {
+	font-family: "Droid Arabic Naskh", 'Roboto Slab', serif !important;
+	color: #fff !important;
+	font-weight: bold;
+	font-size: 22px;
+}
+.nav-menu li a {
+	padding: 20px;
+	color: #fff !important;
+}
+.nav-menu li ul li a {
+	padding: 10px 20px;
+	color: #fff !important;
+}
+.nav-menu li.current-menu-item a {
+	background: #2693BA;
+}
+.nav-menu li a:hover {
+	background: #2693BA;
+}
+.nav-menu li:hover a {
+	background: #2693BA;
+}
+.sidebar-inner aside {
+	background: #fff;
+}
+.widget .widget-title {
+	background: #2693BA !important;
+	color: #fff;
+	font-style: normal;
+	padding: 5px 20px;
+	font-weight: bold;
+}
+.paging-navigation {
+	padding: 10px 0px !important;
+}
+.paging-navigation  .nav-links {
+	padding: 10px !important;
+}
+.site-footer {
+	margin-top: 0px !important;
+	background: #fff;
+}
+.paging-navigation .meta-nav {
+	background: #2693BA !important;
+}
+.site-footer .sidebar-container {
+	background: #50B7DC;
+}
+.site-footer .sidebar-container  a {
+	color: #fff;
+}
+.attachment-post-thumbnail {
+	width: 100%;
+}
+.post-navigation {
+	clear: both;
+}
+.singlepost {
+	background: #fff;
+}
+
+.singlepost h1 {
+	padding: 10px 20px 30px 20px;
+}
+.singlepost header {
+	padding: 10px 20px 0px 20px !important;
+}
+.singlepost .entry-content {
+	padding: 10px 20px 30px 20px !important;
+	width: 80%;
+	float: right;
+}
+.singlepost .entry-meta {
+	width: 190px !important;
+	padding: 0px 0px 0px 40px;
+	float: left;
+	text-align: center;
+}
+.singlepost .entry-meta span{
+	width: 130px;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	margin: 0px;
+}
+.singlepost .entry-meta img{
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	border: 2px solid #50B7DC;
+}
+.entry-content img.alignright, .entry-content .wp-caption.alignright {
+	margin-right: 0px;
+}
+.form-submit input[type=submit] {
+		 border-bottom: 3px solid #2693BA !important;
+		 background: #50B7DC !important;
+		 
+}
+.pagecontent {
+	padding: 30px 0px;
+	background: #fff;
+}
+.pagecontent .entry-header, .pagecontent .entry-content {
+	padding: 0px 30px 0px 50px;
+}
+.archive-header  {
+	padding: 5px 20px 10px 20px;
+	background: url(images/rebon.png) bottom left no-repeat;
+	font-size: 22px;
+	height: auto;
+	margin-top: 30px;
+	color: #fff;	
+}
+.archive-title  {
+	padding: 5px 20px 20px 20px;
+	font-size: 22px;
+	height: auto;
+	color: #fff;	
+}
+.entry-content img.alignleft, .entry-content .wp-caption.alignleft  {
+	margin-left: 0px;
+}
+.home-page-thumb {
+	max-height: 250px;
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+}
+
+.entry-thumbnail {
+	max-height: 300px;
+	overflow: hidden;
+}
+
+@media all and (max-width:800px) {
+	.menu-toggle {
+		margin: auto;
+		float: none;
+		color: #fff;
+	}
+	.nav-menu {
+		display: block;
+	}
+	.menu-top-menu-container {
+	max-width: 700px;
+	display: inline-block;
+	overflow-x: hidden;
+	width: 40%;
+}
+.navbar-header {
+	float:left;
+}
+}
+@media all and (max-width:980px) {
+	.randomposts {
+		display: none;
+	}
+	.singlepost .entry-content {
+	padding: 10px 20px 30px 20px !important;
+	width: 70%;
+	float: right;
+	padding-left: 0px;
+}
+
+}
+
+@media all and (max-width:643px) {
+	.menu-top-menu-container {
+		width: 100% !important;
+		max-width: 100% !important;
+		clear: both !important;
+		float: none !important;
+		position: relative;
+		
+	}
+	.nav-menu li a {
+	padding: 20px;
+	color: #fff !important;
+	border-bottom: 1px solid #fff;
+}
+.nav-menu li ul li a {
+	padding: 10px 20px;
+	color: #fff !important;
+}
+.nav-menu li.current-menu-item a {
+	background: #2693BA;
+}
+.nav-menu li.current-menu-item ul li a {
+	background: none;
+}
+
+.nav-menu li a:hover {
+	background: #2693BA;
+}
+.nav-menu li:hover a {
+	background: none;
+}
+.nav-menu {
+	height: 300px !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.toggled-on .nav-menu li > ul  {
+	border: 0px;
+}
+.singlepost .entry-content {
+	
+	width: 55%;
+	padding-left: 0px !important;
+	float: right;
+}
+}
+
+@media all and (max-width:480px) {
+	.search-form {
+		display: none;
+	}
+	.singlepost .entry-content {
+	
+	width: 100%;
+	float: right;
+}
+.singlepost .entry-meta {
+	display: none;
+}
+.singlepost header {
+	padding: 0px !important;
+	margin-bottom: 0px;
+}
+}
