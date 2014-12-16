@@ -1057,7 +1057,7 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
 .widget { color: #777; font-size: 15px; overflow: hidden; }
 .widget a { color: #777; }
 .widget a:hover { color: #444; }
-.widget > h3 { font-size: 15px; font-weight: 400; text-transform: uppercase; margin-bottom: 6px; }
+.widget > h3 { font-size: 15px; font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
 .widget > h3 a,
 .widget > h3 a:hover { color: #444; }
 .widget > h3 a img { display: none; float: left; margin: 3px 7px 0 0; }
@@ -1102,6 +1102,7 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
 .widget_rss ul li,
 .widget_pages ul li a,
 .widget_nav_menu ul li a,
+.widget_top-posts ul li,
 .alx-tab li,
 .alx-posts li { padding: 10px 0; border-bottom: 1px solid #e4e4e4; }
 
