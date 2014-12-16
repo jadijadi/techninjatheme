@@ -23,11 +23,12 @@
 }
 
 .single .post {
-font-family: "Droid Arabic Naskh";
+    font-family: "Droid Arabic Naskh";
 }
 
 .entry p {
-font-size:	0.8em;
+    font-size:	0.8em;
+    
 }
 
 body {
@@ -55,4 +56,16 @@ body.custom-font-enabled {
 .entry ul li {
 	font-size: 0.9em;
 	margin-right: 30pt;
+}
+
+.content {
+    font-family: "Droid Arabic Naskh";
+}
+
+.post-meta .post-category {
+    float: right;
+    margin-left: 6px;   
+}
+.post-meta .post-date{
+    float: right;
 }
