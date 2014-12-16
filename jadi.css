@@ -69,3 +69,12 @@ body.custom-font-enabled {
 .post-meta .post-date{
     float: right;
 }
+
+
+
+/* remove for two column home page */
+.post-list .post, .post-list .page{
+    float: none;
+    width: 100%;
+}
+
