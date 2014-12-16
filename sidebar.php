@@ -1,20 +1,41 @@
-<?php
-/**
- * The sidebar containing the secondary widget area, displays on posts and pages.
- *
- * If no active widgets in this sidebar, it will be hidden completely.
- *
- * @package WordPress
- * @subpackage Mash_Thirteen
- * @since WP MashThirteen 1.0
- */
+<?php 
+	$sidebar = alx_sidebar_primary();
+	$layout = alx_layout_class();
+	if ( $layout != 'col-1c'):
+?>
 
-if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	<div id="tertiary" class="col-md-3" role="complementary">
-		<div class="sidebar-inner">
-			<div class="widget-area">
-				<?php dynamic_sidebar( 'sidebar-2' ); ?>
-			</div><!-- .widget-area -->
-		</div><!-- .sidebar-inner -->
-	</div><!-- #tertiary -->
+	<div class="sidebar s1">
+		
+		<a class="sidebar-toggle" title="<?php _e('Expand Sidebar','hueman'); ?>"><i class="fa icon-sidebar-toggle"></i></a>
+		
+		<div class="sidebar-content">
+			
+			<?php if ( ot_get_option('sidebar-top') != 'off' ): ?>
+			<div class="sidebar-top group">
+				<p><?php _e('Follow:','hueman'); ?></p>
+				<?php alx_social_links() ; ?>
+			</div>
+			<?php endif; ?>
+			
+			<?php if ( ot_get_option( 'post-nav' ) == 's1') { get_template_part('inc/post-nav'); } ?>
+			
+			<?php if( is_page_template('page-templates/child-menu.php') ): ?>
+			<ul class="child-menu group">
+				<?php wp_list_pages('title_li=&sort_column=menu_order&depth=3'); ?>
+			</ul>
+			<?php endif; ?>
+			
+			<?php dynamic_sidebar($sidebar); ?>
+			
+		</div><!--/.sidebar-content-->
+		
+	</div><!--/.sidebar-->
+
+	<?php if (
+		( $layout == 'col-3cm' ) ||
+		( $layout == 'col-3cl' ) ||
+		( $layout == 'col-3cr' ) )
+		{ get_template_part('sidebar-2'); } 
+	?>
+	
 <?php endif; ?>

@@ -1,62 +1,72 @@
-<?php
-/**
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="maincontainer">
- *
- * @package WordPress
- * @subpackage Mash_Thirteen
- * @since WP MashThirteen 1.0
- */
-?><!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
-<!--<![endif]-->
+<!DOCTYPE html> 
+<html class="no-js" <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width" />
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/html5shiv.js" type="text/javascript"></script>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/respond.min.js" type="text/javascript"></script>
-	<![endif]-->
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.js" type="text/javascript"></script>
+	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title><?php wp_title(''); ?></title>
+
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+	
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-	<?php if ( get_theme_mod( 'mashthirteen_site_format' ) != 1 ) { ?>
-        <div id="page" class="hfeed site-boxed">
-    <?php } else { ?>
-        <div id="page" class="hfeed site">
-    <?php } ?>
-		<header id="masthead" class="site-header" role="banner">
-		<div id="navbar" class="navbar navbar-fixed-top">
-			<div class="navbar-header">				
-			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<?php if(of_get_option('logo_uploader')=='') 
-						echo bloginfo( 'name' );
-					  else { ?>
-						<img src="<?php echo of_get_option('logo_uploader'); ?>">	
-					<?php } ?>
-				</a>				
+
+<div id="wrapper">
+
+	<header id="header">
+	
+		<?php if ( has_nav_menu('topbar') ): ?>
+			<nav class="nav-container group" id="nav-topbar">
+				<div class="nav-toggle"><i class="fa fa-bars"></i></div>
+				<div class="nav-text"><!-- put your mobile menu text here --></div>
+				<div class="nav-wrap container"><?php wp_nav_menu(array('theme_location'=>'topbar','menu_class'=>'nav container-inner group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
+				
+				<div class="container">
+					<div class="container-inner">		
+						<div class="toggle-search"><i class="fa fa-search"></i></div>
+						<div class="search-expand">
+							<div class="search-expand-inner">
+								<?php get_search_form(); ?>
+							</div>
+						</div>
+					</div><!--/.container-inner-->
+				</div><!--/.container-->
+				
+			</nav><!--/#nav-topbar-->
+		<?php endif; ?>
+		
+		<div class="container group">
+			<div class="container-inner">
+				
+				<?php if ( ot_get_option('header-image') == '' ): ?>
+				<div class="group pad">
+					<?php echo alx_site_title(); ?>
+					<?php if ( ot_get_option('site-description') != 'off' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
 				</div>
-				<nav id="site-navigation" class="navigation" role="navigation">
-					<h3 class="menu-toggle"><?php _e( 'Menu', 'mashthirteen' ); ?></h3>
-					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'mashthirteen' ); ?>"><?php _e( 'Skip to content', 'mashthirteen' ); ?></a>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-					<?php if ( get_theme_mod( 'mashthirteen_menusearch_visibility' ) != 1 ) { ?>		
-					<?php get_search_form(); ?>
-					<?php } ?>
-				</nav><!-- #site-navigation -->
-			</div><!-- #navbar -->			
-		</header><!-- #masthead -->
-		<div id="maincontainer" class="row">
+				<?php endif; ?>
+				<?php if ( ot_get_option('header-image') ): ?>
+					<a href="<?php echo home_url('/'); ?>" rel="home">
+						<img class="site-image" src="<?php echo ot_get_option('header-image'); ?>" alt="<?php get_bloginfo('name'); ?>">
+					</a>
+				<?php endif; ?>
+				
+				<?php if ( has_nav_menu('header') ): ?>
+					<nav class="nav-container group" id="nav-header">
+						<div class="nav-toggle"><i class="fa fa-bars"></i></div>
+						<div class="nav-text"><!-- put your mobile menu text here --></div>
+						<div class="nav-wrap container"><?php wp_nav_menu(array('theme_location'=>'header','menu_class'=>'nav container-inner group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
+					</nav><!--/#nav-header-->
+				<?php endif; ?>
+				
+			</div><!--/.container-inner-->
+		</div><!--/.container-->
+		
+	</header><!--/#header-->
+	
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+				<div class="main-inner group">

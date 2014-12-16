@@ -1,39 +1,37 @@
-<?php
-/**
- * The template for displaying Search Results pages.
- *
- * @package WordPress
- * @subpackage Mash_Thirteen
- * @since WP MashThirteen 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<section class="content">
 
-	<div id="primary" class="col-md-9">
-		<div  class="col-md-8 entrypart" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Search Results for: %s', 'twentythirteen' ), get_search_query() ); ?></h1>
-			</header>
-
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'home' ); ?>
-			<?php endwhile; ?>
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-
-			<?php twentythirteen_paging_nav(); ?>
-
-	</div><!-- #content -->	
-		<div  class="col-md-4 randomposts" >
-			<h2>Random Posts</h2>		
-		<?php get_template_part( 'content', 'random' ); ?>
+	<?php get_template_part('inc/page-title'); ?>
+	
+	<div class="pad group">
+		
+		<div class="notebox">
+			<?php _e('For the term','hueman'); ?> "<span><?php echo get_search_query(); ?></span>".
+			<?php if ( !have_posts() ): ?>
+				<?php _e('Please try another search:','hueman'); ?>
+			<?php endif; ?>
+			<div class="search-again">
+				<?php get_search_form(); ?>
+			</div>
 		</div>
-	</div><!-- #primary -->
+		
+		<?php if ( have_posts() ) : ?>
+		
+			<div class="post-list group">
+				<?php $i = 1; echo '<div class="post-row">'; while ( have_posts() ): the_post(); ?>
+				<?php get_template_part('content'); ?>
+				<?php if($i % 2 == 0) { echo '</div><div class="post-row">'; } $i++; endwhile; echo '</div>'; ?>
+			</div><!--/.post-list-->
+		
+			<?php get_template_part('inc/pagination'); ?>
+			
+		<?php endif; ?>
+		
+	</div><!--/.pad-->
+	
+</section><!--/.content-->
 
 <?php get_sidebar(); ?>
+	
 <?php get_footer(); ?>
