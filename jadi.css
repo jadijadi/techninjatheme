@@ -58,9 +58,6 @@ body.custom-font-enabled {
 	margin-right: 30pt;
 }
 
-.content {
-    font-family: "Droid Arabic Naskh";
-}
 
 .post-meta .post-category {
     float: right;
@@ -70,6 +67,13 @@ body.custom-font-enabled {
     float: right;
 }
 
+
+.page-title .meta-single li {
+    float:right;
+}
+.page-title .meta-single li.comments {
+    float: left;
+}
 
 
 /* remove for two column home page */
@@ -89,3 +93,16 @@ body.custom-font-enabled {
     margin-right:0;
     
 }
+
+
+.site-title {
+    float: right;
+    
+}
+.site-description {
+    float: right;
+    margin-right: 20px;
+    font-style:normal;
+     
+}
+
