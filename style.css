@@ -78,7 +78,7 @@ strong { font-weight: 600; }
 
 /*  base : fonts
 /* ------------------------------------ */
-body { font-family: "Titillium", Arial, sans-serif; }
+body { font-family: "Droid Arabic Naskh", "Titillium", Arial, sans-serif; }
 
 @font-face {
 	font-family: 'Titillium';

@@ -56,3 +56,8 @@ body.custom-font-enabled {
 	font-size: 0.9em;
 	margin-right: 30pt;
 }
+
+.entry.excerpt p {
+	font-size: 1em;
+	color: #888;
+}
