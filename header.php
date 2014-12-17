@@ -10,6 +10,8 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	
 	<?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/jadi.css" type="text/css" media="screen" />
+
 </head>
 
 <body <?php body_class(); ?>>
