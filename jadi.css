@@ -23,11 +23,12 @@
 }
 
 .single .post {
-font-family: "Droid Arabic Naskh";
+    font-family: "Droid Arabic Naskh";
 }
 
 .entry p {
-font-size:	0.8em;
+    font-size:	0.8em;
+    
 }
 
 body {
@@ -61,3 +62,51 @@ body.custom-font-enabled {
 	font-size: 1em;
 	color: #888;
 }
+
+.post-meta .post-category {
+    float: right;
+    margin-left: 6px;   
+}
+.post-meta .post-date{
+    float: right;
+}
+
+
+.page-title .meta-single li {
+    float:right;
+}
+.page-title .meta-single li.comments {
+    float: left;
+}
+
+
+/* remove for two column home page */
+.post-list .post, .post-list .page{
+    float: none;
+    width: 100%;
+}
+
+
+
+/* share column converted to row remove if u dont like it */
+.entry.share {
+    padding-right:0;
+}
+
+.sharrre-container {
+    margin-right:0;
+    
+}
+
+
+.site-title {
+    float: right;
+    
+}
+.site-description {
+    float: right;
+    margin-right: 20px;
+    font-style:normal;
+     
+}
+
