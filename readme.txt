@@ -1,7 +1,7 @@
 View more themes from this author: http://alxmedia.se/themes/
 
 You can support the theme author by donating here: 
-https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=K54RW72RZM2HN – any amount is always appreciated.
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=K54RW72RZM2HN â€“ any amount is always appreciated.
 
 
 /*  Theme License
@@ -75,3 +75,4 @@ Right sidebar, top to bottom:
 /* ------------------------------------ */
 
 See headers of files for further details.
+/* a test comment line by Ahmad Kakaei */
